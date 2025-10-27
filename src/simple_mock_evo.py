@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Mock time (0 to pi, 100 steps)
-tlist = np.linspace(0, np.pi, 100)
+# Mock time (0 to 2*pi, 100 steps) for full rebound to +1
+tlist = np.linspace(0, 2*np.pi, 100)
 
-# SEQ Pure: Coherent flip (cos wave – starts 1, dips 0, rebounds ~1)
+# SEQ Pure: Coherent flip (cos wave – starts 1, dips to -1, rebounds to +1)
 expect_pure = np.cos(tlist)
 entropy_final_pure = 8.67e-6  # Mock low entropy
 delta_rho = 1.13e-6  # Mock seal
